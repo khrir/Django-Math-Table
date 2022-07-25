@@ -1,0 +1,41 @@
+{% load static %}
+<html>
+  <head>
+    <link rel='stylesheet' href="{% static 'css/style.css' %}">
+    <title>Tabela de operações</title>
+  </head>
+  <body>
+    <div class="section">
+      <table>
+        <thead>
+          <th>Valor</th>
+          <th>Fator</th>
+          <th>Soma</th>
+          <th>Subtração</th>
+          <th>Produto</th>
+        </thead>
+        <tbody id="tbody">
+
+        </tbody>
+      </table>
+    </div>
+    <script>
+        let valor = {{ number }}
+        for(let i = 0; i <= 10; i++){
+            let linha = tbody.insertRow(); 
+            
+           let col_value = linha.insertCell();
+           let col_fator = linha.insertCell();
+           let col_sum = linha.insertCell();
+           let col_minus = linha.insertCell();
+           let col_times = linha.insertCell();
+           
+           col_value.innerText = valor;
+           col_fator.innerText = i;
+           col_sum.innerText = (valor + i);
+           col_minus.innerText = (valor - i);
+           col_times.innerText = (valor * i);
+        }
+    </script>
+  </body>  
+</html>

@@ -1,0 +1,17 @@
+{% load static %}
+<html>
+  <head>
+    <link rel="stylesheet" href=" {% static 'css/style.css' %}">
+    <title></title>
+  </head>
+  <body>
+    <form action="add">
+      <div class="input">
+        <input type="number" id="number" class="number" name="number" required>
+        <label>Entre com um número:</label>
+      </div>
+      <button type="submit" class="btn">Enviar</button>
+      <span class="answer"></span>
+    </form>
+  </body>  
+</html>
